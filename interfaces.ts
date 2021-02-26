@@ -44,3 +44,27 @@ function createDog(dog: Dog): { name: string, age: number } {
 const myDog = { namem: 'Sally', age: 1 };
 
 console.log(createDog(myDog));
+
+interface searchFunc {
+  (source: string, subString: string): boolean;
+}
+
+const myFunc: searchFunc = (source, subString) => {
+  const result: number = source.search(subString);
+  return result > -1;
+};
+
+console.log(myFunc("Hello, World!", "Hello"));
+
+interface ClockInterface {
+  currentTime: Date;
+  setTime(d: Date): void;
+}
+
+class Clock implements ClockInterface {
+  currentTime: Date = new Date();
+  setTime(d: Date) {
+    this.currentTime = d;
+  }
+  constructor(h: number, m: number) {}
+}

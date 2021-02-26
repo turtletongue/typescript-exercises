@@ -19,3 +19,16 @@ function createDog(dog) {
 }
 const myDog = { namem: 'Sally', age: 1 };
 console.log(createDog(myDog));
+const myFunc = (source, subString) => {
+    const result = source.search(subString);
+    return result > -1;
+};
+console.log(myFunc("Hello, World!", "Hello"));
+class Clock {
+    constructor(h, m) {
+        this.currentTime = new Date();
+    }
+    setTime(d) {
+        this.currentTime = d;
+    }
+}
